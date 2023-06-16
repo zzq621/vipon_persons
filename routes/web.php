@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserPortraitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/setUserPortrait', [UserPortraitController::class, 'setUserPortrait']);
+Route::post('/setUserPortrait', [UserPortraitController::class, 'setUserPortrait']);
+
+Route::get('/getUserScoreInfo', [UserPortraitController::class, 'getUserScoreInfo']);
+Route::post('/getUserScoreInfo', [UserPortraitController::class, 'getUserScoreInfo']);
+
+Route::get('/getUserScoreInfoByUserId', [UserPortraitController::class, 'getUserScoreInfoByUserId']);
+Route::post('/getUserScoreInfoByUserId', [UserPortraitController::class, 'getUserScoreInfoByUserId']);

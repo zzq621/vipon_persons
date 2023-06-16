@@ -43,25 +43,53 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
+
+        //Vipon amazon_db
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
-            'unix_socket' => env('DB_SOCKET', ''),
+            'host' => env('DB_HOST_VIPON_AMAZON', 'localhost'),
+            'database' => env('DB_DATABASE_VIPON_AMAZON', 'forge'),
+            'username' => env('DB_USERNAME_VIPON_AMAZON', 'forge'),
+            'password' => env('DB_PASSWORD_VIPON_AMAZON', ''),
+            'port' => env('DB_PORT_VIPON_AMAZON', '3306'),
             'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',
+            'collation' => 'utf8mb4_general_ci',
             'prefix' => '',
-            'prefix_indexes' => true,
-            'strict' => true,
+            'strict' => false,
             'engine' => null,
-            'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
-            ]) : [],
         ],
+
+        //vipon_event
+        'mysql_vipon_event' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST_VIPON_EVENT', 'localhost'),
+            'database' => env('DB_DATABASE_VIPON_EVENT', 'forge'),
+            'username' => env('DB_USERNAME_VIPON_EVENT', 'forge'),
+            'password' => env('DB_PASSWORD_VIPON_EVENT', ''),
+            'port' => env('DB_PORT_VIPON_EVENT', '3306'),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_general_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
+        //vipon_event
+        'mysql_vipon_event_test' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST_VIPON_AMAZON_TEST', 'localhost'),
+            'database' => env('DB_DATABASE_VIPON_AMAZON_TEST', 'forge'),
+            'username' => env('DB_USERNAME_VIPON_AMAZON_TEST', 'forge'),
+            'password' => env('DB_PASSWORD_VIPON_AMAZON_TEST', ''),
+            'port' => env('DB_PORT_VIPON_AMAZON_TEST', '3306'),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_general_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
+
 
         'pgsql' => [
             'driver' => 'pgsql',
@@ -121,17 +149,11 @@ return [
 
         'client' => env('REDIS_CLIENT', 'phpredis'),
 
-        'options' => [
-            'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
-        ],
-
-        'default' => [
-            'url' => env('REDIS_URL'),
-            'host' => env('REDIS_HOST', '127.0.0.1'),
-            'password' => env('REDIS_PASSWORD', null),
-            'port' => env('REDIS_PORT', '6379'),
-            'database' => env('REDIS_DB', '0'),
+        'vipon_redis' => [
+            'host' => env('REDIS_VIPON_HOST', '127.0.0.1'),
+            'password' => env('REDIS_VIPON_PASSWORD', '123456'),
+            'port' => env('REDIS_VIPON_PORT', '6379'),
+            'database' => env('REDIS_VIPON_DB', '0'),
         ],
 
         'cache' => [
