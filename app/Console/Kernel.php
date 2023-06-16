@@ -28,16 +28,4 @@ class Kernel extends ConsoleKernel
         //$schedule->command('inspire:user_portrait')->daily();
         $schedule->command('inspire:user_portrait')->everyMinute();
     }
-
-    /**
-     * Register the commands for the application.
-     *
-     * @return void
-     */
-    protected function commands()
-    {
-        $this->load(__DIR__.'/Commands');
-
-        require base_path('routes/console.php');
-    }
 }
