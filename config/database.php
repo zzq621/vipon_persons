@@ -47,11 +47,11 @@ return [
         //Vipon amazon_db
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST_VIPON_AMAZON', 'localhost'),
-            'database' => env('DB_DATABASE_VIPON_AMAZON', 'forge'),
-            'username' => env('DB_USERNAME_VIPON_AMAZON', 'forge'),
-            'password' => env('DB_PASSWORD_VIPON_AMAZON', ''),
-            'port' => env('DB_PORT_VIPON_AMAZON', '3306'),
+            'host' => env('DB_HOST_VIPON_AMAZON_TEST', 'localhost'),
+            'database' => env('DB_DATABASE_VIPON_AMAZON_TEST', 'forge'),
+            'username' => env('DB_USERNAME_VIPON_AMAZON_TEST', 'forge'),
+            'password' => env('DB_PASSWORD_VIPON_AMAZON_TEST', ''),
+            'port' => env('DB_PORT_VIPON_AMAZON_TEST', '3306'),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_general_ci',
             'prefix' => '',
@@ -62,10 +62,10 @@ return [
         //vipon_event
         'mysql_vipon_event' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST_VIPON_EVENT', 'localhost'),
-            'database' => env('DB_DATABASE_VIPON_EVENT', 'forge'),
-            'username' => env('DB_USERNAME_VIPON_EVENT', 'forge'),
-            'password' => env('DB_PASSWORD_VIPON_EVENT', ''),
+            'host' => env('DB_HOST_VIPON_EVENT_TEST', 'localhost'),
+            'database' => env('DB_DATABASE_VIPON_EVENT_TEST', 'forge'),
+            'username' => env('DB_USERNAME_VIPON_EVENT_TEST', 'forge'),
+            'password' => env('DB_PASSWORD_VIPON_EVENT_TEST', ''),
             'port' => env('DB_PORT_VIPON_EVENT', '3306'),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_general_ci',
